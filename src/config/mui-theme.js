@@ -52,7 +52,6 @@ export const theme = createTheme({
       fontWeight: 700,
       fontSize: "20px",
       lineHeight: "165%",
-      textAlign: "center",
       color: COLOR.primary,
     },
   },
@@ -111,6 +110,31 @@ export const theme = createTheme({
             fontSize: "20px",
             color: COLOR.primary,
             borderBlockColor: COLOR.yellow,
+          },
+        },
+      ],
+      variants: [
+        {
+          props: { variant: "yellowBtn" },
+          style: {
+            fontWeight: 700,
+            fontSize: "20px",
+            color: COLOR.primary,
+            borderBlockColor: " #efd372",
+            backgroundColor: "#efd372",
+          },
+        },
+      ],
+    },
+    MuiTypography: {
+      variants: [
+        {
+          porps: { variant: "subTitle" },
+          style: {
+            fontFamily: ["Yellowtail", "sans-serif"].join(","),
+            fontWeight: 400,
+            fontSize: "36px",
+            color: "#68a47f",
           },
         },
       ],
