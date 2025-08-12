@@ -14,7 +14,10 @@ import qualityIcon from "../../assets/icons/quality-icon.svg";
 import productImg from "../../assets/productImg.png";
 import { CustomNavLink } from "../../components/customNavLink";
 import { StarIcon } from "../../assets/icons/star-icon";
-import bgImg from "../../assets/banner.jpg"
+import bgImg from "../../assets/banner.jpg";
+import img2 from "../../assets/img2.png";
+import img1 from "../../assets/img1.png";
+import img3 from "../../assets/img3.png";
 
 export const Home = () => {
   return (
@@ -63,7 +66,7 @@ export const Home = () => {
               px={"50px"}
               sx={{
                 width: "100%",
-                backgroundImage: "url(src/assets/img1.png)",
+                backgroundImage: `url(${img1})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
@@ -86,7 +89,7 @@ export const Home = () => {
               px={"50px"}
               sx={{
                 width: "100%",
-                backgroundImage: "url(src/assets/img2.png)",
+                backgroundImage: `url(${img2})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
@@ -111,7 +114,7 @@ export const Home = () => {
                 maxWidth={"50%"}
                 sx={{
                   width: "100%",
-                  backgroundImage: "url(src/assets/img3.png)",
+                  backgroundImage: `url(${img3})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
