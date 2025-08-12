@@ -14,6 +14,7 @@ import qualityIcon from "../../assets/icons/quality-icon.svg";
 import productImg from "../../assets/productImg.png";
 import { CustomNavLink } from "../../components/customNavLink";
 import { StarIcon } from "../../assets/icons/star-icon";
+import bgImg from "../../assets/banner.jpg"
 
 export const Home = () => {
   return (
@@ -21,7 +22,7 @@ export const Home = () => {
       <Box
         sx={{
           width: "100%",
-          backgroundImage: "url(src/assets/banner.jpg)",
+          backgroundImage: `url(${bgImg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
