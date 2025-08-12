@@ -8,7 +8,7 @@ import { SearchIcon } from '../assets/icons/search-icon'
 import { BasketIcon } from '../assets/icons/basket-icon'
 export const Header = () => {
     return <Container maxWidth={'xl'}>
-        <Stack padding={"70px 20px"} direction={'row'} alignItems={'center'}>
+        <Stack padding={"50px 20px"} direction={'row'} alignItems={'center'}>
             {/* header logo  */}
             <CustomNavLink to={"/"}>
                 <img src={logo} alt="Logo img" loading='lazy' />

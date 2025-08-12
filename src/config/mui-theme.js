@@ -7,7 +7,7 @@ export const theme = createTheme({
       xs: 0,
       sm: 320,
       md: 640,
-      lg: 1200,
+      lg: 1400,
       xl: 1595,
     },
   },
@@ -91,7 +91,7 @@ export const theme = createTheme({
       styleOverrides: {
         root: {
           borderRadius: "16px",
-          padding: "28px 39px 28px 39px",
+          padding: "25px 35px 25px 35px",
           color: "inherit",
           transition: "transform 0.3s ease-in-out",
           "&:hover": {
@@ -112,11 +112,10 @@ export const theme = createTheme({
             borderBlockColor: COLOR.yellow,
           },
         },
-      ],
-      variants: [
         {
           props: { variant: "yellowBtn" },
           style: {
+            width: "fit-content",
             fontWeight: 700,
             fontSize: "20px",
             color: COLOR.primary,
@@ -124,17 +123,36 @@ export const theme = createTheme({
             backgroundColor: "#efd372",
           },
         },
+        {
+          props: { variant: "primaryBtn" },
+          style: {
+            width: "fit-content",
+            fontWeight: 700,
+            fontSize: "20px",
+            color: COLOR.white,
+            borderBlockColor: COLOR.primary,
+            backgroundColor: COLOR.primary,
+          },
+        },
       ],
     },
     MuiTypography: {
       variants: [
         {
-          porps: { variant: "subTitle" },
+          props: { variant: "subTitle" },
           style: {
             fontFamily: ["Yellowtail", "sans-serif"].join(","),
             fontWeight: 400,
             fontSize: "36px",
             color: "#68a47f",
+          },
+        },
+        {
+          props: { variant: "productName" },
+          style: {
+            fontWeight: 600,
+            fontSize: "20px",
+            color: COLOR.primary,
           },
         },
       ],
