@@ -25,6 +25,9 @@ import userImg from "../../assets/userImg.jpg";
 import ecoFriendli from "../../assets/ecoFriendli.jpg";
 import { CardComp } from "./components/cardComp";
 import { Title } from "./components/title";
+import { CardData } from "../../components/cardData";
+import { organic } from "../../data/data";
+import img001 from "../../assets/img001.png";
 export const Home = () => {
   return (
     <>
@@ -1014,23 +1017,55 @@ export const Home = () => {
       {/* Organic */}
       <section>
         <Box pt={"100px"} pb={"100px"} bgcolor={COLOR.bgColor}>
-          <CardComp />
+          <Container maxWidth={"xl"} padding={"0"}>
+            <CardComp data={organic} />
+          </Container>
         </Box>
       </section>
       {/* News */}
-      <Box pt={"150px"} pb={"150px"}>
-        <Container>
-          <Stack>
-            <Title
-              title={"News"}
-              titleDec={"Discover weekly content about organic food, & more"}
-              variants={"outlined"}
-              btnText={"More News"}
-              withs={"703px"}
-            />
-          </Stack>
-        </Container>
-      </Box>
+      <section>
+        <Box pt={"150px"} pb={"150px"}>
+          <Container>
+            <Stack>
+              <Title
+                title={"News"}
+                titleDec={"Discover weekly content about organic food, & more"}
+                variants={"outlined"}
+                btnText={"More News"}
+                withs={"703px"}
+              />
+              <Stack direction={"row"} pt={"31px"} gap={"46px"}>
+                <CardData
+                  date={"25 Nov"}
+                  cardImg={img001}
+                  cardBtn={"Read More"}
+                  cardName={"By Rachi Card"}
+                  cardTitle={"The Benefits of Vitamin D & How to Get It"}
+                  cardDec={
+                    "Simply dummy text of the printing and typesetting industry. Lorem Ipsum"
+                  }
+                  cardVariant={"yellowBtn"}
+                  cardColor={COLOR.iconUser}
+                />
+
+                <CardData
+                  date={"25 Nov"}
+                  cardImg={img001}
+                  cardBtn={"Read More"}
+                  cardName={"By Rachi Card"}
+                  cardTitle={"Our Favourite Summertime Tommeto"}
+                  cardDec={
+                    "Simply dummy text of the printing and typesetting industry. Lorem Ipsum"
+                  }
+                  cardVariant={"yellowBtn"}
+                  cardColor={COLOR.iconUser}
+                />
+              </Stack>
+            </Stack>
+          </Container>
+        </Box>
+      </section>
+      {/* Subscribe to our Newsletter */}
     </>
   );
 };

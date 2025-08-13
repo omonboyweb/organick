@@ -1,8 +1,7 @@
 import React from "react";
-import { organic } from "../../../data/data";
 import { Grid, Typography } from "@mui/material";
 import { COLOR } from "../../../config/colors";
-export const CardComp = () => {
+export const CardComp = ({ data }) => {
   return (
     <Grid
       container
@@ -12,7 +11,7 @@ export const CardComp = () => {
       direction={"row"}
       flexWrap={"nowrap"}
     >
-      {organic.map((item) => (
+      {data.map((item) => (
         <Grid
           key={item.name}
           width={"550px"}

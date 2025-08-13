@@ -10,4 +10,5 @@ export const COLOR = {
   white: "#fff",
   search: "#fafafa",
   bgColor: "#f1f8f4",
+  iconUser: "#EFD372",
 };
