@@ -40,6 +40,7 @@ export const theme = createTheme({
     h6: {
       fontWeight: 800,
       fontSize: "25px",
+      lineHeight: "25px",
       color: COLOR.primary,
     },
     subtitle1: {
@@ -177,6 +178,16 @@ export const theme = createTheme({
           },
         },
       ],
+    },
+    MuiFormControlLabel: {
+      styleOverrides: {
+        root: {},
+        label: {
+          fontWeight: 600,
+          fontSize: "20px",
+          color: COLOR.primary,
+        },
+      },
     },
   },
 });

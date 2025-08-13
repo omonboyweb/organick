@@ -26,8 +26,9 @@ import ecoFriendli from "../../assets/ecoFriendli.jpg";
 import { CardComp } from "./components/cardComp";
 import { Title } from "./components/title";
 import { CardData } from "../../components/cardData";
-import { organic } from "../../data/data";
+import { organic, products } from "../../data/data";
 import img001 from "../../assets/img001.png";
+import { AboutCard } from "./components/aboutCard";
 export const Home = () => {
   return (
     <>
@@ -116,91 +117,26 @@ export const Home = () => {
       </section>
       {/* about   */}
       <section>
-        <Box bgcolor={COLOR.light}>
-          <Container maxWidth={"lg"}>
-            <Stack direction={"row"} padding={"186px 0 199px 0"}>
-              <Stack
-                maxWidth={"50%"}
-                sx={{
-                  width: "100%",
-                  backgroundImage: `url(${img3})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                }}
-              ></Stack>
-              <Stack maxWidth={"50%"}>
-                <Typography variant="subTitle" fontSize={"36px"}>
-                  About Us
-                </Typography>
-                <Typography variant="h2" mb={"14px"}>
-                  We Believe in Working Accredited Farmers
-                </Typography>
-                <Typography variant="subtitle1" mb={"46px"}>
-                  Simply dummy text of the printing and typesetting industry.
-                  Lorem had ceased to been the industry's standard dummy text
-                  ever since the 1500s, when an unknown printer took a galley.
-                </Typography>
-                <Stack direction={"row"} gap={"19px"} mb={"30px"}>
-                  <Stack
-                    justifyContent={"center"}
-                    alignItems={"center"}
-                    bgcolor={COLOR.white}
-                    borderRadius={"20px"}
-                    width={"101px"}
-                    height={"101px"}
-                  >
-                    {" "}
-                    <img src={organicFood} alt="" />
-                  </Stack>
-                  <Stack direction={"column"}>
-                    <Typography variant="h6">Organic Foods Only</Typography>
-                    <Typography variant="subtitle1">
-                      Simply dummy text of the printing and typesetting
-                      industry. Lorem Ipsum
-                    </Typography>
-                  </Stack>
-                </Stack>
-                <Stack direction={"row"} gap={"19px"} mb={"45px"}>
-                  <Stack
-                    justifyContent={"center"}
-                    alignItems={"center"}
-                    bgcolor={COLOR.white}
-                    borderRadius={"20px"}
-                    width={"101px"}
-                    height={"101px"}
-                  >
-                    {" "}
-                    <img src={qualityIcon} alt="" />
-                  </Stack>
-                  <Stack direction={"column"}>
-                    <Typography variant="h6">Quality Standards</Typography>
-                    <Typography variant="subtitle1">
-                      Simply dummy text of the printing and typesetting
-                      industry. Lorem Ipsum{" "}
-                    </Typography>
-                  </Stack>
-                </Stack>
-                <CustomNavLink to={"/about"}>
-                  <Button variant="primaryBtn">
-                    Shop Now
-                    <Stack
-                      width={"19px"}
-                      height={"19px"}
-                      borderRadius={"100%"}
-                      bgcolor="#335b6b"
-                      justifyContent={"center"}
-                      alignItems={"center"}
-                      ml={"10px"}
-                    >
-                      {RightArrow()}
-                    </Stack>
-                  </Button>
-                </CustomNavLink>
-              </Stack>
-            </Stack>
-          </Container>
-        </Box>
+        <AboutCard
+          bgColor={COLOR.light}
+          bgImg={img3}
+          aboutCardTitle={"We Believe in Working Accredited Farmers"}
+          aboutCardDec={
+            "Simply dummy text of the printing and typesetting industry. Lorem had ceased to  been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley."
+          }
+          aboutTextTitle={"Organic Foods Only"}
+          btnText={"Shop now"}
+          aboutTextTitle2={"Quality Standards"}
+          aboutSubTitle={
+            "Simply dummy text of the printing and typesetting industry. Lorem Ipsum"
+          }
+          aboutSubTitle2={
+            "Simply dummy text of the printing and typesetting industry. Lorem Ipsum"
+          }
+          icon1={organicFood}
+          icon2={qualityIcon}
+          rowS={"column"}
+        />
       </section>
       {/* Categories */}
       <section>
@@ -209,7 +145,7 @@ export const Home = () => {
             direction={"column"}
             textAlign={"center"}
             justifyContent={"center"}
-            padding={"186px 0 199px 0"}
+            padding={"186px 0 50px 0"}
           >
             <Typography variant="subTitle" mb={"5px"}>
               Categories
@@ -218,229 +154,83 @@ export const Home = () => {
               Our Products
             </Typography>
             <Grid container spacing={2}>
-              <Grid
-                size={3}
-                padding={"30px"}
-                bgcolor={COLOR.light}
-                position={"relative"}
-                borderRadius={"30px"}
-                border={"1px solid #7EB693"}
-              >
-                <Stack>
-                  <Typography
-                    position={"absolute"}
-                    top={"20px"}
-                    left={"20px"}
-                    fontWeight={600}
-                    fontSize={"15px"}
-                    textAlign={"center"}
-                    color={COLOR.white}
-                    py={"6px"}
-                    px={"12px"}
-                    bgcolor={COLOR.primary}
-                    width={"fit-content"}
-                    borderRadius={"8px"}
-                  >
-                    Vegetable
-                  </Typography>
-                  <Stack overflow={"hidden"}>
-                    <img
-                      src={productImg}
-                      alt="products imgs"
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                      }}
-                    />
-                  </Stack>
-                  <Typography variant="productName">
-                    Fresh Banana Fruites
-                  </Typography>
-                  <Stack
-                    direction={"row"}
-                    borderTop={"1px solid #dedddd"}
-                    pt={"6px"}
-                    alignItems={"center"}
-                  >
+              {products.map((item) => (
+                <Grid
+                  height={"433px"}
+                  key={item.id}
+                  size={3}
+                  padding={"30px"}
+                  bgcolor={COLOR.light}
+                  position={"relative"}
+                  borderRadius={"30px"}
+                  border={"1px solid #7EB693"}
+                >
+                  <Stack>
                     <Typography
-                      fontSize={"15px"}
+                      position={"absolute"}
+                      top={"20px"}
+                      left={"20px"}
                       fontWeight={600}
-                      color="#b8b8b8"
-                      sx={{
-                        textDecoration: "line-through",
-                      }}
-                    >
-                      $20.00
-                    </Typography>
-                    <Typography
-                      variant="subtitle2"
-                      fontSize={"18px"}
-                      ml={"8px"}
-                    >
-                      $13.00
-                    </Typography>
-
-                    <Typography ml={"auto"}>
-                      {StarIcon()}
-                      {StarIcon()}
-                      {StarIcon()}
-                      {StarIcon()}
-                      {StarIcon()}
-                    </Typography>
-                  </Stack>
-                </Stack>
-              </Grid>
-              <Grid size={3} padding={"30px"} bgcolor={COLOR.light}>
-                <Stack>
-                  <Stack overflow={"hidden"}>
-                    <img
-                      src={productImg}
-                      alt="products imgs"
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                      }}
-                    />
-                  </Stack>
-                  <Typography variant="productName">
-                    Fresh Banana Fruites
-                  </Typography>
-                  <Stack
-                    direction={"row"}
-                    borderTop={"1px solid #dedddd"}
-                    pt={"6px"}
-                    alignItems={"center"}
-                  >
-                    <Typography
                       fontSize={"15px"}
-                      fontWeight={600}
-                      color="#b8b8b8"
-                      sx={{
-                        textDecoration: "line-through",
-                      }}
+                      textAlign={"center"}
+                      color={COLOR.white}
+                      py={"6px"}
+                      px={"12px"}
+                      bgcolor={COLOR.primary}
+                      width={"fit-content"}
+                      borderRadius={"8px"}
                     >
-                      $20.00
+                      {item.type}
                     </Typography>
-                    <Typography
-                      variant="subtitle2"
-                      fontSize={"18px"}
-                      ml={"8px"}
+                    <Stack overflow={"hidden"}>
+                      <CustomNavLink to={`shopsingle/${item.id}`}>
+                        <img
+                          src={item.img}
+                          alt="products imgs"
+                          style={{
+                            width: "100%",
+                            height: "314px",
+                            objectFit: "cover",
+                          }}
+                        />
+                      </CustomNavLink>
+                    </Stack>
+                    <Typography variant="productName">{item.name}</Typography>
+                    <Stack
+                      direction={"row"}
+                      borderTop={"1px solid #dedddd"}
+                      pt={"6px"}
+                      alignItems={"center"}
                     >
-                      $13.00
-                    </Typography>
+                      <Typography
+                        fontSize={"15px"}
+                        fontWeight={600}
+                        color="#b8b8b8"
+                        sx={{
+                          textDecoration: "line-through",
+                        }}
+                      >
+                        ${item.price}
+                      </Typography>
+                      <Typography
+                        variant="subtitle2"
+                        fontSize={"18px"}
+                        ml={"8px"}
+                      >
+                        ${item.salePrice}
+                      </Typography>
 
-                    <Typography ml={"auto"}>
-                      {StarIcon()}
-                      {StarIcon()}
-                      {StarIcon()}
-                      {StarIcon()}
-                      {StarIcon()}
-                    </Typography>
+                      <Typography ml={"auto"}>
+                        {StarIcon()}
+                        {StarIcon()}
+                        {StarIcon()}
+                        {StarIcon()}
+                        {StarIcon()}
+                      </Typography>
+                    </Stack>
                   </Stack>
-                </Stack>
-              </Grid>
-              <Grid size={3} padding={"30px"} bgcolor={COLOR.light}>
-                <Stack>
-                  <Stack overflow={"hidden"}>
-                    <img
-                      src={productImg}
-                      alt="products imgs"
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                      }}
-                    />
-                  </Stack>
-                  <Typography variant="productName">
-                    Fresh Banana Fruites
-                  </Typography>
-                  <Stack
-                    direction={"row"}
-                    borderTop={"1px solid #dedddd"}
-                    pt={"6px"}
-                    alignItems={"center"}
-                  >
-                    <Typography
-                      fontSize={"15px"}
-                      fontWeight={600}
-                      color="#b8b8b8"
-                      sx={{
-                        textDecoration: "line-through",
-                      }}
-                    >
-                      $20.00
-                    </Typography>
-                    <Typography
-                      variant="subtitle2"
-                      fontSize={"18px"}
-                      ml={"8px"}
-                    >
-                      $13.00
-                    </Typography>
-
-                    <Typography ml={"auto"}>
-                      {StarIcon()}
-                      {StarIcon()}
-                      {StarIcon()}
-                      {StarIcon()}
-                      {StarIcon()}
-                    </Typography>
-                  </Stack>
-                </Stack>
-              </Grid>
-              <Grid size={3} padding={"30px"} bgcolor={COLOR.light}>
-                <Stack>
-                  <Stack overflow={"hidden"}>
-                    <img
-                      src={productImg}
-                      alt="products imgs"
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                      }}
-                    />
-                  </Stack>
-                  <Typography variant="productName">
-                    Fresh Banana Fruites
-                  </Typography>
-                  <Stack
-                    direction={"row"}
-                    borderTop={"1px solid #dedddd"}
-                    pt={"6px"}
-                    alignItems={"center"}
-                  >
-                    <Typography
-                      fontSize={"15px"}
-                      fontWeight={600}
-                      color="#b8b8b8"
-                      sx={{
-                        textDecoration: "line-through",
-                      }}
-                    >
-                      $20.00
-                    </Typography>
-                    <Typography
-                      variant="subtitle2"
-                      fontSize={"18px"}
-                      ml={"8px"}
-                    >
-                      $13.00
-                    </Typography>
-
-                    <Typography ml={"auto"}>
-                      {StarIcon()}
-                      {StarIcon()}
-                      {StarIcon()}
-                      {StarIcon()}
-                      {StarIcon()}
-                    </Typography>
-                  </Stack>
-                </Stack>
-              </Grid>
+                </Grid>
+              ))}
             </Grid>
             <Button
               variant="primaryBtn"
