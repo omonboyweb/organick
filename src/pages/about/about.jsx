@@ -27,19 +27,11 @@ import teamUser3 from "../../assets/teamUser3.jpg";
 import { FacebookIcon } from "../../assets/icons/facebook-icon";
 import { Instagram } from "../../assets/icons/instagram";
 import { Xicon } from "../../assets/icons/x-icon";
+import { PagesHeader } from "../../components/pagesHeader";
 export const About = () => {
   return (
     <>
-      <Box
-        height={"405px"}
-        mb={"62px"}
-        sx={{
-          backgroundImage: `url(${aboutBg})`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      ></Box>
+      <PagesHeader imgs={aboutBg} />
 
       <section>
         <Box>

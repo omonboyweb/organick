@@ -9,6 +9,10 @@ import proImg5 from "../assets/productImg5.png";
 import proImg6 from "../assets/productImg6.png";
 import proImg7 from "../assets/productImg7.png";
 import proImg8 from "../assets/productImg8.png";
+import proImg9 from "../assets/productImg9.png";
+import proImg10 from "../assets/productImg10.png";
+import proImg11 from "../assets/productImg11.png";
+import proImg12 from "../assets/productImg12.png";
 import choose01 from "../assets/icons/choose01.svg";
 import choose02 from "../assets/icons/choose02.svg";
 import choose03 from "../assets/icons/choose03.svg";
@@ -137,4 +141,110 @@ export const aboutUs = [
   { img: aboutUs2, name: "Nuts & Feesd", id: 2 },
   { img: aboutUs3, name: "Fruits", id: 3 },
   { img: aboutUs4, name: "Vegetable", id: 3 },
+];
+
+export const products1 = [
+  {
+    id: 1,
+    name: "Calabrese Broccoli",
+    price: 20,
+    salePrice: 13,
+    img: proImg,
+    type: "Vegetable",
+  },
+
+  {
+    id: 2,
+    name: "Fresh Banana Fruites",
+    price: 20,
+    salePrice: 14,
+    img: proImg2,
+    type: "Fresh",
+  },
+
+  {
+    id: 3,
+    name: "White Nuts",
+    price: 20,
+    salePrice: 15,
+    img: proImg3,
+    type: "Millets",
+  },
+
+  {
+    id: 4,
+    name: "Vegan Red Tomato",
+    price: 20,
+    salePrice: 17,
+    img: proImg4,
+    type: "Vegetable",
+  },
+
+  {
+    id: 5,
+    name: "Mung Bean",
+    price: 20,
+    salePrice: 11,
+    img: proImg5,
+    type: "Health",
+  },
+
+  {
+    id: 6,
+    name: "Brown Hazelnut",
+    price: 20,
+    salePrice: 12,
+    img: proImg6,
+    type: "Nuts",
+  },
+
+  {
+    id: 7,
+    name: "Eggs",
+    price: 20,
+    salePrice: 17,
+    img: proImg7,
+    type: "Fresh",
+  },
+
+  {
+    id: 8,
+    name: "Zelco Suji Elaichi Rusk",
+    price: 20,
+    salePrice: 15,
+    img: proImg8,
+    type: "Fresh",
+  },
+  {
+    id: 9,
+    name: "Mung Bean",
+    price: 20,
+    salePrice: 15,
+    img: proImg9,
+    type: "Health",
+  },
+  {
+    id: 10,
+    name: "White Hazelnut",
+    price: 20,
+    salePrice: 15,
+    img: proImg10,
+    type: "Nuts",
+  },
+  {
+    id: 11,
+    name: "Fresh Corn",
+    price: 20,
+    salePrice: 15,
+    img: proImg11,
+    type: "Fresh",
+  },
+  {
+    id: 12,
+    name: "Fresh Corn",
+    price: 20,
+    salePrice: 15,
+    img: proImg12,
+    type: "Fresh",
+  },
 ];
