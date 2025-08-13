@@ -11,4 +11,5 @@ export const COLOR = {
   search: "#fafafa",
   bgColor: "#f1f8f4",
   iconUser: "#EFD372",
+  colorPlc: "#ababab",
 };

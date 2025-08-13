@@ -1065,7 +1065,6 @@ export const Home = () => {
           </Container>
         </Box>
       </section>
-      {/* Subscribe to our Newsletter */}
     </>
   );
 };

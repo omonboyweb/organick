@@ -18,7 +18,7 @@ export const CardData = ({
       borderRadius={"30px"}
       bgcolor={COLOR.primary}
       maxWidth={"677px"}
-      minHeight={"500px"}
+      height={"auto"}
       px={"32px"}
       py={"42px"}
       sx={{
@@ -47,7 +47,6 @@ export const CardData = ({
         p={"40px 50px"}
         borderRadius={"34px"}
         mb={"-100px"}
-        minHeight={"332px"}
         height={"100%"}
         boxShadow={"0 20px 35px 0 rgba(167, 167, 167, 0.25)"}
       >

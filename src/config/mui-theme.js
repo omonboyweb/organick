@@ -77,11 +77,12 @@ export const theme = createTheme({
         disableRipple: true,
       },
       styleOverrides: {
-        color: COLOR.primary,
-        "&:hover": {
-          COLOR: COLOR.lightBlue,
+        root: {
+          color: COLOR.primary,
+          "&:hover": {
+            COLOR: COLOR.lightBlue,
+          },
         },
-        backgroundColor: COLOR.primary,
       },
     },
     MuiButton: {
@@ -156,6 +157,23 @@ export const theme = createTheme({
             fontWeight: 600,
             fontSize: "20px",
             color: COLOR.primary,
+          },
+        },
+        {
+          props: { variant: "footerText" },
+          style: {
+            fontWeight: 700,
+            fontSize: "30px",
+            color: COLOR.primary,
+          },
+        },
+        {
+          props: { variant: "footerDec" },
+          style: {
+            fontWeight: 700,
+            fontSize: "18px",
+            lineHeight: "165%",
+            color: COLOR.dark,
           },
         },
       ],

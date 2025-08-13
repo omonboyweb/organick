@@ -8,6 +8,7 @@ export const CustomInput = styled.input`
   width: 100%;
   height: 100%;
   background: transparent;
+  color: ${({ colorText }) => colorText || "currentcolor"};
 
   &::placeholder {
     font-weight: 400;
