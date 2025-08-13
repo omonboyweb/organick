@@ -93,6 +93,7 @@ export const theme = createTheme({
           borderRadius: "16px",
           padding: "25px 35px 25px 35px",
           color: "inherit",
+          display: "inline-flex",
           transition: "transform 0.3s ease-in-out",
           "&:hover": {
             transform: "scale(1.01)",
@@ -110,6 +111,7 @@ export const theme = createTheme({
             fontSize: "20px",
             color: COLOR.primary,
             borderBlockColor: COLOR.yellow,
+            textWrap: "nowrap",
           },
         },
         {
@@ -118,6 +120,7 @@ export const theme = createTheme({
             width: "fit-content",
             fontWeight: 700,
             fontSize: "20px",
+            lineHeight: "0",
             color: COLOR.primary,
             borderBlockColor: " #efd372",
             backgroundColor: "#efd372",

@@ -6,6 +6,7 @@ import {
   Stack,
   Typography,
   Rating,
+  Avatar,
 } from "@mui/material";
 import { RightArrow } from "../../assets/icons/rightArrow";
 import { COLOR } from "../../config/colors";
@@ -18,7 +19,12 @@ import bgImg from "../../assets/banner.jpg";
 import img2 from "../../assets/img2.png";
 import img1 from "../../assets/img1.png";
 import img3 from "../../assets/img3.png";
-
+import bannerLeft from "../../assets/leftBanner.png";
+import bannerRight from "../../assets/rightBaner.png";
+import userImg from "../../assets/userImg.jpg";
+import ecoFriendli from "../../assets/ecoFriendli.jpg";
+import { CardComp } from "./components/cardComp";
+import { Title } from "./components/title";
 export const Home = () => {
   return (
     <>
@@ -193,11 +199,13 @@ export const Home = () => {
           </Container>
         </Box>
       </section>
+      {/* Categories */}
       <section>
         <Container maxWidth={"lg"}>
           <Stack
             direction={"column"}
             textAlign={"center"}
+            justifyContent={"center"}
             padding={"186px 0 199px 0"}
           >
             <Typography variant="subTitle" mb={"5px"}>
@@ -212,6 +220,8 @@ export const Home = () => {
                 padding={"30px"}
                 bgcolor={COLOR.light}
                 position={"relative"}
+                borderRadius={"30px"}
+                border={"1px solid #7EB693"}
               >
                 <Stack>
                   <Typography
@@ -429,9 +439,598 @@ export const Home = () => {
                 </Stack>
               </Grid>
             </Grid>
+            <Button
+              variant="primaryBtn"
+              sx={{
+                display: "flex",
+                m: "120px auto",
+              }}
+            >
+              Load More
+              <Stack
+                width={"19px"}
+                height={"19px"}
+                borderRadius={"100%"}
+                bgcolor={"#335b6b"}
+                justifyContent={"center"}
+                alignItems={"center"}
+              >
+                {RightArrow()}
+              </Stack>
+            </Button>
           </Stack>
         </Container>
       </section>
+      {/* Testimonial */}
+      <section>
+        <Stack
+          width={"100%"}
+          sx={{
+            backgroundImage: `url(${bannerLeft}), url(${bannerRight})`,
+            backgroundPosition: "left center,right center",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          <Container maxWidth={"lg"}>
+            <Stack
+              direction={"column"}
+              justifyContent={"center"}
+              alignItems={"center"}
+              pt={"150px"}
+              pb={"150px"}
+            >
+              <Typography variant="subTitle" mb={"8px"}>
+                Testimonial
+              </Typography>
+              <Typography variant="h2" mb={"51px"}>
+                What Our Customer Saying?
+              </Typography>
+              <Avatar
+                alt="Remy Sharp"
+                src={userImg}
+                sx={{ width: 115, height: 115 }}
+              />
+              <Typography mt={"20px"}>
+                {StarIcon()}
+                {StarIcon()}
+                {StarIcon()}
+                {StarIcon()}
+                {StarIcon()}
+              </Typography>
+              <Typography
+                variant="subtitle1"
+                maxWidth={"780px"}
+                textAlign={"center"}
+              >
+                Simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been.
+              </Typography>
+              <Typography variant="productName" mt={"20px"}>
+                Sara Taylor
+              </Typography>
+              <Typography
+                textAlign={"center"}
+                width={"780px"}
+                fontSize={"15px"}
+                fontWeight={"400"}
+                color={COLOR.dark}
+                pb={"102px"}
+                borderBottom={`1px solid ${COLOR.dark}`}
+              >
+                Consumer
+              </Typography>
+              <Stack direction={"row"} gap={"30px"} pt={"90px"}>
+                <Box
+                  width={"211px"}
+                  height={"211px"}
+                  border={"4px solid #7eb693"}
+                  borderRadius={"50%"}
+                  padding={"8px"}
+                  overflow={"hidden"}
+                >
+                  <Stack
+                    bgcolor={"#f1f1f1"}
+                    width={"100%"}
+                    height={"100%"}
+                    borderRadius={"50%"}
+                    textAlign={"center"}
+                    alignItems={"center"}
+                    justifyContent={"center"}
+                  >
+                    <Typography variant="h2">100%</Typography>
+                    <Typography variant="productName">Organic</Typography>
+                  </Stack>
+                </Box>
+                <Box
+                  width={"211px"}
+                  height={"211px"}
+                  border={"4px solid #7eb693"}
+                  borderRadius={"50%"}
+                  padding={"8px"}
+                  overflow={"hidden"}
+                >
+                  <Stack
+                    bgcolor={"#f1f1f1"}
+                    width={"100%"}
+                    height={"100%"}
+                    borderRadius={"50%"}
+                    textAlign={"center"}
+                    alignItems={"center"}
+                    justifyContent={"center"}
+                  >
+                    <Typography variant="h2">285</Typography>
+                    <Typography variant="productName">
+                      Active Product
+                    </Typography>
+                  </Stack>
+                </Box>
+                <Box
+                  width={"211px"}
+                  height={"211px"}
+                  border={"4px solid #7eb693"}
+                  borderRadius={"50%"}
+                  padding={"8px"}
+                  overflow={"hidden"}
+                >
+                  <Stack
+                    bgcolor={"#f1f1f1"}
+                    width={"100%"}
+                    height={"100%"}
+                    borderRadius={"50%"}
+                    textAlign={"center"}
+                    alignItems={"center"}
+                    justifyContent={"center"}
+                  >
+                    <Typography variant="h2">350+</Typography>
+                    <Typography variant="productName">
+                      Organic Orchads
+                    </Typography>
+                  </Stack>
+                </Box>
+                <Box
+                  width={"211px"}
+                  height={"211px"}
+                  border={"4px solid #7eb693"}
+                  borderRadius={"50%"}
+                  padding={"8px"}
+                  overflow={"hidden"}
+                >
+                  <Stack
+                    bgcolor={"#f1f1f1"}
+                    width={"100%"}
+                    height={"100%"}
+                    borderRadius={"50%"}
+                    textAlign={"center"}
+                    alignItems={"center"}
+                    justifyContent={"center"}
+                  >
+                    <Typography variant="h2">25+</Typography>
+                    <Typography variant="productName">
+                      Years of Farming
+                    </Typography>
+                  </Stack>
+                </Box>
+              </Stack>
+            </Stack>
+          </Container>
+        </Stack>
+      </section>
+      {/* Offer */}
+      <section>
+        <Stack bgcolor={COLOR.primary} pt={"200px"} pb={"200px"}>
+          <Container>
+            <Stack>
+              <Stack
+                direction={"row"}
+                justifyContent={"space-between"}
+                alignItems={"center"}
+              >
+                <Stack>
+                  <Typography variant="subTitle">Offer</Typography>
+                  <Typography variant="h2" color={COLOR.white}>
+                    We Offer Organic For You
+                  </Typography>
+                </Stack>
+                <Button variant="yellowBtn">
+                  View All Product
+                  <Stack
+                    ml={"10px"}
+                    width={"19px"}
+                    height={"19px"}
+                    overflow={"hidden"}
+                    borderRadius={"100%"}
+                    bgcolor={COLOR.primary}
+                    justifyContent={"center"}
+                    alignItems={"center"}
+                  >
+                    {RightArrow()}
+                  </Stack>
+                </Button>
+              </Stack>
+              <Grid container spacing={2} pt={"50px"} mb={"100px"}>
+                <Grid
+                  size={3}
+                  padding={"30px"}
+                  bgcolor={COLOR.light}
+                  position={"relative"}
+                  borderRadius={"30px"}
+                  border={"1px solid #7EB693"}
+                >
+                  <Stack>
+                    <Typography
+                      position={"absolute"}
+                      top={"20px"}
+                      left={"20px"}
+                      fontWeight={600}
+                      fontSize={"15px"}
+                      textAlign={"center"}
+                      color={COLOR.white}
+                      py={"6px"}
+                      px={"12px"}
+                      bgcolor={COLOR.primary}
+                      width={"fit-content"}
+                      borderRadius={"8px"}
+                    >
+                      Vegetable
+                    </Typography>
+                    <Stack overflow={"hidden"}>
+                      <img
+                        src={productImg}
+                        alt="products imgs"
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                        }}
+                      />
+                    </Stack>
+                    <Typography variant="productName">
+                      Fresh Banana Fruites
+                    </Typography>
+                    <Stack
+                      direction={"row"}
+                      borderTop={"1px solid #dedddd"}
+                      pt={"6px"}
+                      alignItems={"center"}
+                    >
+                      <Typography
+                        fontSize={"15px"}
+                        fontWeight={600}
+                        color="#b8b8b8"
+                        sx={{
+                          textDecoration: "line-through",
+                        }}
+                      >
+                        $20.00
+                      </Typography>
+                      <Typography
+                        variant="subtitle2"
+                        fontSize={"18px"}
+                        ml={"8px"}
+                      >
+                        $13.00
+                      </Typography>
+
+                      <Typography ml={"auto"}>
+                        {StarIcon()}
+                        {StarIcon()}
+                        {StarIcon()}
+                        {StarIcon()}
+                        {StarIcon()}
+                      </Typography>
+                    </Stack>
+                  </Stack>
+                </Grid>
+                <Grid
+                  size={3}
+                  padding={"30px"}
+                  bgcolor={COLOR.light}
+                  position={"relative"}
+                  borderRadius={"30px"}
+                  border={"1px solid #7EB693"}
+                >
+                  <Stack>
+                    <Typography
+                      position={"absolute"}
+                      top={"20px"}
+                      left={"20px"}
+                      fontWeight={600}
+                      fontSize={"15px"}
+                      textAlign={"center"}
+                      color={COLOR.white}
+                      py={"6px"}
+                      px={"12px"}
+                      bgcolor={COLOR.primary}
+                      width={"fit-content"}
+                      borderRadius={"8px"}
+                    >
+                      Vegetable
+                    </Typography>
+                    <Stack overflow={"hidden"}>
+                      <img
+                        src={productImg}
+                        alt="products imgs"
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                        }}
+                      />
+                    </Stack>
+                    <Typography variant="productName">
+                      Fresh Banana Fruites
+                    </Typography>
+                    <Stack
+                      direction={"row"}
+                      borderTop={"1px solid #dedddd"}
+                      pt={"6px"}
+                      alignItems={"center"}
+                    >
+                      <Typography
+                        fontSize={"15px"}
+                        fontWeight={600}
+                        color="#b8b8b8"
+                        sx={{
+                          textDecoration: "line-through",
+                        }}
+                      >
+                        $20.00
+                      </Typography>
+                      <Typography
+                        variant="subtitle2"
+                        fontSize={"18px"}
+                        ml={"8px"}
+                      >
+                        $13.00
+                      </Typography>
+
+                      <Typography ml={"auto"}>
+                        {StarIcon()}
+                        {StarIcon()}
+                        {StarIcon()}
+                        {StarIcon()}
+                        {StarIcon()}
+                      </Typography>
+                    </Stack>
+                  </Stack>
+                </Grid>
+                <Grid
+                  size={3}
+                  padding={"30px"}
+                  bgcolor={COLOR.light}
+                  position={"relative"}
+                  borderRadius={"30px"}
+                  border={"1px solid #7EB693"}
+                >
+                  <Stack>
+                    <Typography
+                      position={"absolute"}
+                      top={"20px"}
+                      left={"20px"}
+                      fontWeight={600}
+                      fontSize={"15px"}
+                      textAlign={"center"}
+                      color={COLOR.white}
+                      py={"6px"}
+                      px={"12px"}
+                      bgcolor={COLOR.primary}
+                      width={"fit-content"}
+                      borderRadius={"8px"}
+                    >
+                      Vegetable
+                    </Typography>
+                    <Stack overflow={"hidden"}>
+                      <img
+                        src={productImg}
+                        alt="products imgs"
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                        }}
+                      />
+                    </Stack>
+                    <Typography variant="productName">
+                      Fresh Banana Fruites
+                    </Typography>
+                    <Stack
+                      direction={"row"}
+                      borderTop={"1px solid #dedddd"}
+                      pt={"6px"}
+                      alignItems={"center"}
+                    >
+                      <Typography
+                        fontSize={"15px"}
+                        fontWeight={600}
+                        color="#b8b8b8"
+                        sx={{
+                          textDecoration: "line-through",
+                        }}
+                      >
+                        $20.00
+                      </Typography>
+                      <Typography
+                        variant="subtitle2"
+                        fontSize={"18px"}
+                        ml={"8px"}
+                      >
+                        $13.00
+                      </Typography>
+
+                      <Typography ml={"auto"}>
+                        {StarIcon()}
+                        {StarIcon()}
+                        {StarIcon()}
+                        {StarIcon()}
+                        {StarIcon()}
+                      </Typography>
+                    </Stack>
+                  </Stack>
+                </Grid>{" "}
+                <Grid
+                  size={3}
+                  padding={"30px"}
+                  bgcolor={COLOR.light}
+                  position={"relative"}
+                  borderRadius={"30px"}
+                  border={"1px solid #7EB693"}
+                >
+                  <Stack>
+                    <Typography
+                      position={"absolute"}
+                      top={"20px"}
+                      left={"20px"}
+                      fontWeight={600}
+                      fontSize={"15px"}
+                      textAlign={"center"}
+                      color={COLOR.white}
+                      py={"6px"}
+                      px={"12px"}
+                      bgcolor={COLOR.primary}
+                      width={"fit-content"}
+                      borderRadius={"8px"}
+                    >
+                      Vegetable
+                    </Typography>
+                    <Stack overflow={"hidden"}>
+                      <img
+                        src={productImg}
+                        alt="products imgs"
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                        }}
+                      />
+                    </Stack>
+                    <Typography variant="productName">
+                      Fresh Banana Fruites
+                    </Typography>
+                    <Stack
+                      direction={"row"}
+                      borderTop={"1px solid #dedddd"}
+                      pt={"6px"}
+                      alignItems={"center"}
+                    >
+                      <Typography
+                        fontSize={"15px"}
+                        fontWeight={600}
+                        color="#b8b8b8"
+                        sx={{
+                          textDecoration: "line-through",
+                        }}
+                      >
+                        $20.00
+                      </Typography>
+                      <Typography
+                        variant="subtitle2"
+                        fontSize={"18px"}
+                        ml={"8px"}
+                      >
+                        $13.00
+                      </Typography>
+
+                      <Typography ml={"auto"}>
+                        {StarIcon()}
+                        {StarIcon()}
+                        {StarIcon()}
+                        {StarIcon()}
+                        {StarIcon()}
+                      </Typography>
+                    </Stack>
+                  </Stack>
+                </Grid>
+              </Grid>
+            </Stack>
+          </Container>
+        </Stack>
+      </section>
+      {/* Eco Friendly */}
+      <section>
+        <Box
+          sx={{
+            backgroundImage: `url(${ecoFriendli})`,
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "left center",
+            backgroundSize: "50% 100%",
+          }}
+        >
+          <Container maxWidth={"lg"}>
+            <Stack
+              pt={"178px"}
+              pb={"185px"}
+              marginLeft={"600px"}
+              bgcolor={COLOR.white}
+              position={"relative"}
+            >
+              <Typography variant="subTitle" zIndex={"1"}>
+                Eco Friendly
+              </Typography>
+              <Typography variant="h2" zIndex={"1"}>
+                Econis is a Friendly Organic Store
+              </Typography>
+              <Stack mt={"35px"}>
+                <Typography
+                  fontSize={"25px"}
+                  fontWeight={"500"}
+                  color={COLOR.primary}
+                  zIndex={"1"}
+                >
+                  Start with Our Company First
+                </Typography>
+                <Typography variant="subtitle1" zIndex={"1"}>
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptat
+                  accusantium doloremque laudantium. Sed ut perspiciatis.
+                </Typography>
+              </Stack>
+              <Stack mt={"35px"}>
+                <Typography
+                  fontSize={"25px"}
+                  fontWeight={"500"}
+                  color={COLOR.primary}
+                  zIndex={"1"}
+                >
+                  Farming Strategies of Today
+                </Typography>
+                <Typography variant="subtitle1" zIndex={"1"}>
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptat
+                  accusantium doloremque laudantium. Sed ut perspiciatis.
+                </Typography>
+              </Stack>
+              <Box
+                bgcolor={COLOR.white}
+                borderRadius={"30px"}
+                position={"absolute"}
+                width={"150px"}
+                height={"600px"}
+                top={"100px"}
+                left={"-80px"}
+              ></Box>
+            </Stack>
+          </Container>
+        </Box>
+      </section>
+      {/* Organic */}
+      <section>
+        <Box pt={"100px"} pb={"100px"} bgcolor={COLOR.bgColor}>
+          <CardComp />
+        </Box>
+      </section>
+      {/* News */}
+      <Box pt={"150px"} pb={"150px"}>
+        <Container>
+          <Stack>
+            <Title
+              title={"News"}
+              titleDec={"Discover weekly content about organic food, & more"}
+              variants={"outlined"}
+              btnText={"More News"}
+              withs={"703px"}
+            />
+          </Stack>
+        </Container>
+      </Box>
     </>
   );
 };
