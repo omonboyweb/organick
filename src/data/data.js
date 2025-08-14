@@ -140,7 +140,7 @@ export const aboutUs = [
   { img: aboutUs1, name: "Spicy", id: 1 },
   { img: aboutUs2, name: "Nuts & Feesd", id: 2 },
   { img: aboutUs3, name: "Fruits", id: 3 },
-  { img: aboutUs4, name: "Vegetable", id: 3 },
+  { img: aboutUs4, name: "Vegetable", id: 4 },
 ];
 
 export const products1 = [

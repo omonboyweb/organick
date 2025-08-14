@@ -4,12 +4,11 @@ import notFound from "../assets/notFound.png";
 import { N404 } from "../assets/icons/404";
 import { RightArrow } from "../assets/icons/rightArrow";
 export const Notfound = () => {
-  const [args] = React.useState();
-
   return (
     <>
       <Box
         p={"214px 0px"}
+        mb={"100px"}
         sx={{
           backgroundImage: `url(${notFound})`,
           backgroundRepeat: "no-repeat",

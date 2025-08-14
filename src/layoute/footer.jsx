@@ -8,6 +8,7 @@ import { FacebookIcon } from "../assets/icons/facebook-icon";
 import { Xicon } from "../assets/icons/x-icon";
 import { PintresIcon } from "../assets/icons/pintres-icon";
 export const Footer = () => {
+
   return (
     <Box bgcolor={COLOR.white}>
       <Container maxWidth={"lg"}>

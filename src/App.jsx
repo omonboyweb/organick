@@ -14,7 +14,7 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="shop" element={<Shop />} />
         <Route path="/:id" element={<ShopSingle />} />
-        <Route path="shop/shopsingle/:id" element={<ShopSingle />} />
+        {/* <Route path="shop/shopsingle/:id" element={<ShopSingle />} /> */}
         <Route path="pages" element={<Notfound />} />
         <Route path="progect" element={<Notfound />} />
         <Route path="news" element={<Notfound />} />
