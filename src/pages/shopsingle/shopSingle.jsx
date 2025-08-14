@@ -20,7 +20,9 @@ export const ShopSingle = () => {
     const selectedId = arr.find((item) => item.id == id);
     setData(selectedId);
   }, [id]);
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Box>
