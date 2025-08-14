@@ -7,8 +7,8 @@ import { Instagram } from "../assets/icons/instagram";
 import { FacebookIcon } from "../assets/icons/facebook-icon";
 import { Xicon } from "../assets/icons/x-icon";
 import { PintresIcon } from "../assets/icons/pintres-icon";
+import { Icon } from "../assets/icons/icon";
 export const Footer = () => {
-
   return (
     <Box bgcolor={COLOR.white}>
       <Container maxWidth={"lg"}>
@@ -119,6 +119,7 @@ export const Footer = () => {
           <Typography variant="footerDec"> Webflow </Typography>
         </Typography>
       </Stack>
+      <Box>{Icon()}</Box>
     </Box>
   );
 };

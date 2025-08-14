@@ -18,6 +18,7 @@ function App() {
         <Route path="pages" element={<Notfound />} />
         <Route path="progect" element={<Notfound />} />
         <Route path="news" element={<Notfound />} />
+        <Route path="*" element={<Notfound />} />
       </Route>
     </Routes>
   );
