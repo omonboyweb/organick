@@ -145,7 +145,7 @@ export const aboutUs = [
 
 export const products1 = [
   {
-    id: 1,
+    id: 9,
     name: "Calabrese Broccoli",
     price: 20,
     salePrice: 13,
@@ -154,7 +154,7 @@ export const products1 = [
   },
 
   {
-    id: 2,
+    id: 10,
     name: "Fresh Banana Fruites",
     price: 20,
     salePrice: 14,
@@ -163,7 +163,7 @@ export const products1 = [
   },
 
   {
-    id: 3,
+    id: 11,
     name: "White Nuts",
     price: 20,
     salePrice: 15,
@@ -172,7 +172,7 @@ export const products1 = [
   },
 
   {
-    id: 4,
+    id: 12,
     name: "Vegan Red Tomato",
     price: 20,
     salePrice: 17,
@@ -181,7 +181,7 @@ export const products1 = [
   },
 
   {
-    id: 5,
+    id: 13,
     name: "Mung Bean",
     price: 20,
     salePrice: 11,
@@ -190,7 +190,7 @@ export const products1 = [
   },
 
   {
-    id: 6,
+    id: 14,
     name: "Brown Hazelnut",
     price: 20,
     salePrice: 12,
@@ -199,7 +199,7 @@ export const products1 = [
   },
 
   {
-    id: 7,
+    id: 15,
     name: "Eggs",
     price: 20,
     salePrice: 17,
@@ -208,7 +208,7 @@ export const products1 = [
   },
 
   {
-    id: 8,
+    id: 16,
     name: "Zelco Suji Elaichi Rusk",
     price: 20,
     salePrice: 15,
@@ -216,7 +216,7 @@ export const products1 = [
     type: "Fresh",
   },
   {
-    id: 9,
+    id: 17,
     name: "Mung Bean",
     price: 20,
     salePrice: 15,
@@ -224,7 +224,7 @@ export const products1 = [
     type: "Health",
   },
   {
-    id: 10,
+    id: 18,
     name: "White Hazelnut",
     price: 20,
     salePrice: 15,
@@ -232,7 +232,7 @@ export const products1 = [
     type: "Nuts",
   },
   {
-    id: 11,
+    id: 19,
     name: "Fresh Corn",
     price: 20,
     salePrice: 15,
@@ -240,11 +240,49 @@ export const products1 = [
     type: "Fresh",
   },
   {
-    id: 12,
+    id: 20,
     name: "Fresh Corn",
     price: 20,
     salePrice: 15,
     img: proImg12,
     type: "Fresh",
+  },
+];
+
+export const fourPro = [
+  {
+    id: 9,
+    name: "Calabrese Broccoli",
+    price: 20,
+    salePrice: 13,
+    img: proImg,
+    type: "Vegetable",
+  },
+
+  {
+    id: 10,
+    name: "Fresh Banana Fruites",
+    price: 20,
+    salePrice: 14,
+    img: proImg2,
+    type: "Fresh",
+  },
+
+  {
+    id: 11,
+    name: "White Nuts",
+    price: 20,
+    salePrice: 15,
+    img: proImg3,
+    type: "Millets",
+  },
+
+  {
+    id: 12,
+    name: "Vegan Red Tomato",
+    price: 20,
+    salePrice: 17,
+    img: proImg4,
+    type: "Vegetable",
   },
 ];

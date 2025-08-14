@@ -34,7 +34,7 @@ export const CardRender = ({ data }) => {
               {item.type}
             </Typography>
             <Stack overflow={"hidden"}>
-              <CustomNavLink to={`shopsingle/${item.id}`}>
+              <CustomNavLink to={`/${item.id}`}>
                 <img
                   src={item.img}
                   alt="products imgs"

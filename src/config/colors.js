@@ -12,4 +12,5 @@ export const COLOR = {
   bgColor: "#f1f8f4",
   iconUser: "#EFD372",
   colorPlc: "#ababab",
+  lightPrimary: "#eff6f1",
 };
